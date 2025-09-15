@@ -1,0 +1,50 @@
+{
+  "title": "Sign in",
+  "description": {
+    "part1": "Enter your email and password to continue.",
+    "part2": "You can also use a social provider."
+  },
+  "form": {
+    "email": {
+      "label": "Email",
+      "placeholder": "you@example.com",
+      "errors": {
+        "required": "Email is required",
+        "invalid": "Enter a valid email"
+      }
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Your password",
+      "errors": {
+        "required": "Password is required",
+        "min": "At least 8 characters"
+      }
+    },
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?"
+  },
+  "actions": {
+    "submit": "Sign in",
+    "cancel": "Cancel",
+    "or": "or",
+    "signup": "Sign up"
+  },
+  "oauth": {
+    "title": "Continue with",
+    "google": "Google",
+    "github": "GitHub",
+    "apple": "Apple",
+    "meta": "Meta"
+  },
+  "feedback": {
+    "success": "Welcome back!",
+    "invalidCredentials": "Invalid email or password",
+    "genericError": "Something went wrong. Please try again."
+  },
+  "auth": { "noAccount": "Don't have an account?" },
+  "image": { "alt": "Image" },
+  "legal": {
+    "byContinuing": "By clicking continue, you agree to our <1>Terms of Service</1> and <3>Privacy Policy</3>."
+  }
+}

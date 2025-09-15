@@ -1,0 +1,54 @@
+{
+  "title": "Iniciar sesión",
+  "description": {
+    "part1": "Introduce tu correo y contraseña para continuar.",
+    "part2": "También puedes usar un proveedor externo."
+  },
+  "form": {
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "tú@ejemplo.com",
+      "errors": {
+        "required": "El correo es obligatorio",
+        "invalid": "Introduce un correo válido"
+      }
+    },
+    "password": {
+      "label": "Contraseña",
+      "placeholder": "Tu contraseña",
+      "errors": {
+        "required": "La contraseña es obligatoria",
+        "min": "Mínimo 8 caracteres"
+      }
+    },
+    "rememberMe": "Recuérdame",
+    "forgotPassword": "¿Olvidaste la contraseña?"
+  },
+  "actions": {
+    "submit": "Entrar",
+    "cancel": "Cancelar",
+    "signup": "Crear cuenta",
+    "or": "o"
+  },
+  "oauth": {
+    "title": "Continuar con",
+    "google": "Google",
+    "github": "GitHub",
+    "apple": "Apple",
+    "meta": "Meta"
+  },
+  "auth": {
+    "noAccount": "¿No tienes cuenta?"
+  },
+  "image": {
+    "alt": "Imagen"
+  },
+  "legal": {
+    "byContinuing": "Al continuar, aceptas nuestros <1>Términos de servicio</1> y <3>Política de privacidad</3>."
+  },
+  "feedback": {
+    "success": "¡Bienvenido de nuevo!",
+    "invalidCredentials": "Correo o contraseña incorrectos",
+    "genericError": "Algo salió mal. Inténtalo de nuevo."
+  }
+}

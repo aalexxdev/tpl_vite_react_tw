@@ -46,5 +46,9 @@
   "image": { "alt": "Image" },
   "legal": {
     "byContinuing": "By clicking continue, you agree to our <1>Terms of Service</1> and <3>Privacy Policy</3>."
+  },
+  "language": {
+    "selectLabel": "Select language",
+    "placeholder": "Language"
   }
 }

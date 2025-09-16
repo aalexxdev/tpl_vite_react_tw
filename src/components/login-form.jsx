@@ -126,7 +126,7 @@ export function LoginForm({ className, ...props }) {
 
           <div className="relative hidden bg-muted md:block">
             <img
-              src="/placeholder.svg"
+              src="/images/placeholder.svg"
               alt={t("image.alt", "Image")}
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />

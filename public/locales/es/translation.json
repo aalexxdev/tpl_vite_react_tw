@@ -4,6 +4,10 @@
     "part1": "Introduce tu correo y contraseña para continuar.",
     "part2": "También puedes usar un proveedor externo."
   },
+  "language": {
+    "selectLabel": "Seleccionar idioma",
+    "placeholder": "Idioma"
+  },
   "form": {
     "email": {
       "label": "Correo electrónico",

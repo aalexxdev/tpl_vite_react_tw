@@ -12,11 +12,15 @@ import {
 function labelFor(lng) {
   try {
     const [lang, region] = lng.split("-");
-    const langName = new Intl.DisplayNames([lng], { type: "language" }).of(lang);
+    const langName = new Intl.DisplayNames([lng], { type: "language" }).of(
+      lang,
+    );
     let label = langName || lng;
 
     if (region) {
-      const regionName = new Intl.DisplayNames([lng], { type: "region" }).of(region);
+      const regionName = new Intl.DisplayNames([lng], { type: "region" }).of(
+        region,
+      );
       label += regionName ? ` (${regionName})` : ` (${region})`;
     }
     // Capitalize first letter (some locales return lowercase)
@@ -38,10 +42,19 @@ export default function LanguageSwitcher({ className = "" }) {
     const uniq = Array.from(new Set(list));
     const current = i18n.resolvedLanguage || i18n.language || uniq[0] || "en";
     const rest = uniq.filter((l) => !current.startsWith(l));
-    return [current, ...rest.sort((a, b) => labelFor(a).localeCompare(labelFor(b)))];
-  }, [i18n.options?.supportedLngs, i18n.store?.data, i18n.resolvedLanguage, i18n.language]);
+    return [
+      current,
+      ...rest.sort((a, b) => labelFor(a).localeCompare(labelFor(b))),
+    ];
+  }, [
+    i18n.options?.supportedLngs,
+    i18n.store?.data,
+    i18n.resolvedLanguage,
+    i18n.language,
+  ]);
 
-  const current = i18n.resolvedLanguage || i18n.language || languages[0] || "en";
+  const current =
+    i18n.resolvedLanguage || i18n.language || languages[0] || "en";
 
   useEffect(() => {
     if (current) document.documentElement.setAttribute("lang", current);
@@ -55,22 +68,22 @@ export default function LanguageSwitcher({ className = "" }) {
   };
 
   return (
-     <div className="fixed top-3 left-3 z-50">
-    
-    <Select value={current} onValueChange={onChange}>
-      <SelectTrigger
-        className={`h-9 w-[200px] justify-between bg-background text-foreground ${className}`}
-        aria-label={t("language.selectLabel", "Select language")}
-      >
-        <SelectValue placeholder={t("language.placeholder", "Language")} />
-      </SelectTrigger>
-      <SelectContent>
-        {languages.map((lng) => (
-          <SelectItem key={lng} value={lng}>
-            {labelFor(lng)}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select></div>
+    <div className="fixed top-3 left-3 z-50">
+      <Select value={current} onValueChange={onChange}>
+        <SelectTrigger
+          className={`h-9 w-[200px] justify-between bg-background text-foreground ${className}`}
+          aria-label={t("language.selectLabel", "Select language")}
+        >
+          <SelectValue placeholder={t("language.placeholder", "Language")} />
+        </SelectTrigger>
+        <SelectContent>
+          {languages.map((lng) => (
+            <SelectItem key={lng} value={lng}>
+              {labelFor(lng)}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+    </div>
   );
 }
